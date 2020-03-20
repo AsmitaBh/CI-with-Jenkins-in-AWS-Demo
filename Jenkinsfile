@@ -27,14 +27,14 @@ pipeline {
 		stage("Build image") {
             steps {
                 script {
-                    myapp = docker.build("infokarthick/kubernetesrepos:${env.BUILD_ID}")
+                    myapp = docker.build("asmitabh/kubernetesrepos:${env.BUILD_ID}")
                 }
             }
         }
         stage("Push image") {
             steps {
                 script {
-                    docker.withRegistry('https://registry.hub.docker.com', 'docker_infokarthick') {
+                    docker.withRegistry('https://registry.hub.docker.com', 'docker_asmitabh') {
                             myapp.push("${env.BUILD_ID}")
                     }
                 }
