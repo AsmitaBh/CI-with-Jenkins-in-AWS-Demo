@@ -4,7 +4,7 @@ pipeline {
 		PROJECT_ID = 'devops-practice-262023'
 		CLUSTER_NAME = 'cluster-k8s'
 		LOCATION = 'europe-west1-b'
-		CREDENTIALS_ID = 'DevOps Practice'
+		CREDENTIALS_ID = 'kuberneteslogin'
 	}
 	stages {
 		stage ("Checkout code") {
